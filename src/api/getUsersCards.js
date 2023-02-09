@@ -1,7 +1,8 @@
  import axios from 'axios';
+import { SERVER } from '../actions';
 
  const getUsersCards = () => {
-    const req_url = "https://instagramserver23.onrender.com"
+    const req_url = SERVER
     return axios(req_url)
  }
 

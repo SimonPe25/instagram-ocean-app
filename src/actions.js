@@ -1,0 +1,1 @@
+export const SERVER = 'https://instagramserver23.onrender.com'

@@ -22,7 +22,7 @@ const UserList = (props) => {
                 toggleAdded={toggleAdded}
                 toggleFavorite={toggleFavorite}
                 className="album__content"
-                key={userCards._id}
+                key={userCards._id+1}
                 _id={userCards._id}
                 isInfavorite={userCards.isInfavorite}
                 url={userCards.url}

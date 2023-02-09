@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+import { SERVER } from '../../actions';
 import './comentBox.scss'
  
 const ComentBox = (props) => {
@@ -7,7 +8,7 @@ const ComentBox = (props) => {
     const [generalComent, setGeneralComent] = useState([])
    
     useEffect(() => {
-      fetch(`https://instagramserver23.onrender.com/users/${_id}`)
+      fetch(`${SERVER}/users/${_id}`)
       .then((res) => res.json())
       .then((result) => {
          
@@ -20,10 +21,12 @@ const ComentBox = (props) => {
         polzun.scrollTop = polzun.scrollHeight;
       });
 
+      
+
         return (
-            <ul className="coment-box" id="coment">
-              {generalComent.map((item) => (
-                <li  key={item.message} className="coment-container" >
+            <ul className="coment-box" id="coment" >
+              {generalComent.map((item, i) => (
+                <li  key={i} className="coment-container" >
                   <div className="coment-boxName" >
                     <Link
                       to={item.autor}

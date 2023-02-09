@@ -5,6 +5,7 @@ import "./modalStyle.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { getMessage } from "../../store/selectors";
 import { udateComent } from "../../store/actions";
+import { SERVER } from "../../actions";
 
 const Modal = (props) => {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ const Modal = (props) => {
 
   setTimeout(
     () =>
-      fetch(`https://backend-for-instagram.herokuapp.com/users/${_id}`)
+      fetch(`${SERVER}/users/${_id}`)
         .then((res) => res.json())
         .then((result) => {
           dispatch(udateComent(result[nameArray]));

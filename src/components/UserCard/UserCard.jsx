@@ -10,9 +10,8 @@ const UserCard = (props) => {
   const { name, url, isInfavorite, _id, toggleFavorite, LifeСredo } =
     props;
     const link = `${name}`
-
   return (
-    <li className="container-card">
+    <li className="container-card" key={_id}>
       <Link to={link}>
         <div className="title-cards">
           <img className="title-cards__photo-small" src={url} alt={name} />

@@ -19,7 +19,7 @@ const Form = (props) => {
   const submitForm = (e) => {
     e.preventDefault();
     axios
-      .put("https://backend-for-instagram.herokuapp.com/users", values)
+      .put("https://instagramserver23.onrender.com/users", values)
       .then((res) => {})
       .catch((e) => {
         console.log("Error in Message!");
