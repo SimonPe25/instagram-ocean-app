@@ -7,7 +7,7 @@ const ComentBox = (props) => {
     const [generalComent, setGeneralComent] = useState([])
    
     useEffect(() => {
-      fetch(`https://backend-for-instagram.herokuapp.com/users/${_id}`)
+      fetch(`https://instagramserver23.onrender.com/users/${_id}`)
       .then((res) => res.json())
       .then((result) => {
          

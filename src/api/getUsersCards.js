@@ -1,7 +1,7 @@
  import axios from 'axios';
 
  const getUsersCards = () => {
-    const req_url = "https://warm-brushlands-96074.herokuapp.com/"
+    const req_url = "https://instagramserver23.onrender.com"
     return axios(req_url)
  }
 
