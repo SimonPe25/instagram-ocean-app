@@ -7,6 +7,8 @@ import './home.scss';
 
 const Home = (props) => {
     const {toggleAdded, toggleFavorite, cards} = props
+
+    console.log("Cards - ", cards);
     return (
         <>
         <Header cards={cards} toggleAdded={toggleAdded} />
